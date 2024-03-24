@@ -9,9 +9,12 @@ public class Triggered : MonoBehaviour
    
   
     
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hit");
+        if(collision.rigidbody)
+        {
+            Debug.Log("Hit");
+        }
     }
     
 }
